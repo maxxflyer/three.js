@@ -45,7 +45,7 @@
 				controls.target.set( 0, 1.6, 0 );
 				controls.update();
 
-				const floorGeometry = new THREE.PlaneGeometry( 4, 4 );
+				const floorGeometry = new THREE.PlaneGeometry( 40, 40 );
 				const floorMaterial = new THREE.MeshStandardMaterial( {
 					color: 0xeeeeee,
 					roughness: 1.0,
@@ -79,7 +79,7 @@
 					new THREE.TorusGeometry( 0.2, 0.04, 64, 32 )
 				];
 
-				for ( let i = 0; i < 50; i ++ ) {
+				for ( let i = 0; i < 100; i ++ ) {
 
 					const geometry = geometries[ Math.floor( Math.random() * geometries.length ) ];
 					const material = new THREE.MeshStandardMaterial( {
@@ -147,7 +147,7 @@
 
 				const line = new THREE.Line( geometry );
 				line.name = 'line';
-				line.scale.z = 5;
+				line.scale.z = 100;
 
 				controller1.add( line.clone() );
 				controller2.add( line.clone() );
@@ -238,7 +238,7 @@
 
 				} else {
 
-					line.scale.z = 5;
+					line.scale.z = 100;
 
 				}
 
