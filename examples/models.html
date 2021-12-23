@@ -156,6 +156,21 @@
 				raycaster = new THREE.Raycaster();
 
 				//
+				
+				new GLTFLoader()
+					.setPath( 'models/gltf/' )
+					.load( 'SheenChair.glb', function ( gltf ) {
+
+						scene.add( gltf.scene );
+
+						const object = gltf.scene.getObjectByName( 'SheenChair_fabric' );
+
+						const gui = new GUI();
+
+						gui.add( object.material, 'sheen', 0, 1 );
+						gui.open();
+
+					} );
 
 				window.addEventListener( 'resize', onWindowResize );
 
