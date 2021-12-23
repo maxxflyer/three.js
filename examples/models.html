@@ -170,7 +170,7 @@
 				gltfLoader.setPath( 'models/gltf/' ).load( 'SheenChair.glb', function ( gltf ) {
 
 						scene.add( gltf.scene );
-
+gltf.scene.rotation.y =  Math.PI;
 						const object = gltf.scene.getObjectByName( 'SheenChair_fabric' );
 
 						const gui = new GUI();
