@@ -1,6 +1,7 @@
 
 <html lang="en">
 	<head>
+		
 		<title>models</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -351,7 +352,7 @@ gltf.scene.rotation.y =  Math.PI;
                                 if (data.handedness == "left") {
                                     //console.log("Left Paddle Down");
                                     if (i == 1) {
-                                        dolly.rotateY(-THREE.Math.degToRad(1)*0.1);
+                                        dolly.rotateY(-THREE.Math.degToRad(1)*0.2);
                                     }
                                     if (i == 3) {
                                         //reset teleport to home position
@@ -362,7 +363,7 @@ gltf.scene.rotation.y =  Math.PI;
                                 } else {
                                     //console.log("Right Paddle Down");
                                     if (i == 1) {
-                                        dolly.rotateY(THREE.Math.degToRad(1)*0.1);
+                                        dolly.rotateY(THREE.Math.degToRad(1)*0.2);
                                     }
                                 }
                             } else {
@@ -372,10 +373,10 @@ gltf.scene.rotation.y =  Math.PI;
                                     //use the paddle buttons to rotate
                                     if (data.handedness == "left") {
                                         //console.log("Left Paddle Down");
-                                        dolly.rotateY(-THREE.Math.degToRad(Math.abs(value))*0.1);
+                                        dolly.rotateY(-THREE.Math.degToRad(Math.abs(value))*0.2);
                                     } else {
                                         //console.log("Right Paddle Down");
-                                        dolly.rotateY(THREE.Math.degToRad(Math.abs(value))*0.1);
+                                        dolly.rotateY(THREE.Math.degToRad(Math.abs(value))*0.2);
                                     }
                                 }
                             }
@@ -415,7 +416,7 @@ gltf.scene.rotation.y =  Math.PI;
                                     }
                                 } else {
                                     // (data.axes[2] > 0) ? console.log('left on right thumbstick') : console.log('right on right thumbstick')
-                                    dolly.rotateY(-THREE.Math.degToRad(data.axes[2])*0.1);
+                                    dolly.rotateY(-THREE.Math.degToRad(data.axes[2])*0.2);
                                 }
                                 controls.update();
                             }
