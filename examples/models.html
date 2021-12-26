@@ -351,7 +351,7 @@ gltf.scene.rotation.y =  Math.PI;
                                 if (data.handedness == "left") {
                                     //console.log("Left Paddle Down");
                                     if (i == 1) {
-                                        dolly.rotateY(-THREE.Math.degToRad(1));
+                                        dolly.rotateY(-THREE.Math.degToRad(1)*0.1);
                                     }
                                     if (i == 3) {
                                         //reset teleport to home position
@@ -362,7 +362,7 @@ gltf.scene.rotation.y =  Math.PI;
                                 } else {
                                     //console.log("Right Paddle Down");
                                     if (i == 1) {
-                                        dolly.rotateY(THREE.Math.degToRad(1));
+                                        dolly.rotateY(THREE.Math.degToRad(1)*0.1);
                                     }
                                 }
                             } else {
@@ -372,10 +372,10 @@ gltf.scene.rotation.y =  Math.PI;
                                     //use the paddle buttons to rotate
                                     if (data.handedness == "left") {
                                         //console.log("Left Paddle Down");
-                                        dolly.rotateY(-THREE.Math.degToRad(Math.abs(value)));
+                                        dolly.rotateY(-THREE.Math.degToRad(Math.abs(value))*0.1);
                                     } else {
                                         //console.log("Right Paddle Down");
-                                        dolly.rotateY(THREE.Math.degToRad(Math.abs(value)));
+                                        dolly.rotateY(THREE.Math.degToRad(Math.abs(value))*0.1);
                                     }
                                 }
                             }
