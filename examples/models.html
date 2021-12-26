@@ -396,8 +396,8 @@ gltf.scene.rotation.y =  Math.PI;
 
                                     //move our dolly
                                     //we reverse the vectors 90degrees so we can do straffing side to side movement
-                                    dolly.position.x -= cameraVector.z * speedFactor[i] * data.axes[2];
-                                    dolly.position.z += cameraVector.x * speedFactor[i] * data.axes[2];
+                                    dolly.position.x -= cameraVector.z * speedFactor[i] * data.axes[2] *0.5;
+                                    dolly.position.z += cameraVector.x * speedFactor[i] * data.axes[2] *0.5;
 
                                     //provide haptic feedback if available in browser
                                     if (
@@ -405,13 +405,13 @@ gltf.scene.rotation.y =  Math.PI;
                                         source.gamepad.hapticActuators[0]
                                     ) {
                                         var pulseStrength = Math.abs(data.axes[2]) + Math.abs(data.axes[3]);
-                                        if (pulseStrength > 0.75) {
-                                            pulseStrength = 0.75;
+                                        if (pulseStrength > 0.5) {
+                                            pulseStrength = 0.5;
                                         }
 
                                         var didPulse = source.gamepad.hapticActuators[0].pulse(
                                             pulseStrength,
-                                            100
+                                            50
                                         );
                                     }
                                 } else {
@@ -432,8 +432,8 @@ gltf.scene.rotation.y =  Math.PI;
                                         source.gamepad.hapticActuators[0]
                                     ) {
                                         var pulseStrength = Math.abs(data.axes[3]);
-                                        if (pulseStrength > 0.75) {
-                                            pulseStrength = 0.75;
+                                        if (pulseStrength > 0.5) {
+                                            pulseStrength = 0.5;
                                         }
                                        // var didPulse = source.gamepad.hapticActuators[0].pulse(
                                        //     pulseStrength,
@@ -442,8 +442,8 @@ gltf.scene.rotation.y =  Math.PI;
                                     }
                                 } else {
                                     // (data.axes[3] > 0) ? console.log('up on right thumbstick') : console.log('down on right thumbstick')
-                                    dolly.position.x -= cameraVector.x * speedFactor[i] * data.axes[3];
-                                    dolly.position.z -= cameraVector.z * speedFactor[i] * data.axes[3];
+                                    dolly.position.x -= cameraVector.x * speedFactor[i] * data.axes[3] *0.5;
+                                    dolly.position.z -= cameraVector.z * speedFactor[i] * data.axes[3] *0.5;
 
                                     //provide haptic feedback if available in browser
                                     if (
@@ -451,12 +451,12 @@ gltf.scene.rotation.y =  Math.PI;
                                         source.gamepad.hapticActuators[0]
                                     ) {
                                         var pulseStrength = Math.abs(data.axes[2]) + Math.abs(data.axes[3]);
-                                        if (pulseStrength > 0.75) {
-                                            pulseStrength = 0.75;
+                                        if (pulseStrength > 0.5) {
+                                            pulseStrength = 0.5;
                                         }
                                         var didPulse = source.gamepad.hapticActuators[0].pulse(
                                             pulseStrength,
-                                            100
+                                            50
                                         );
                                     }
                                 }
