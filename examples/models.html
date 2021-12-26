@@ -425,7 +425,7 @@ gltf.scene.rotation.y =  Math.PI;
                                 //up and down axis on thumbsticks
                                 if (data.handedness == "left") {
                                     // (data.axes[3] > 0) ? console.log('up on left thumbstick') : console.log('down on left thumbstick')
-                                   // dolly.position.y -= speedFactor[i] * data.axes[3];
+                                    dolly.position.y -= speedFactor[i] * data.axes[3];
                                     //provide haptic feedback if available in browser
                                     if (
                                         source.gamepad.hapticActuators &&
