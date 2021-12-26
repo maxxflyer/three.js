@@ -425,7 +425,7 @@ gltf.scene.rotation.y =  Math.PI;
                                 //up and down axis on thumbsticks
                                 if (data.handedness == "left") {
                                     // (data.axes[3] > 0) ? console.log('up on left thumbstick') : console.log('down on left thumbstick')
-                                    dolly.position.y -= speedFactor[i] * data.axes[3];
+                                    //dolly.position.y -= speedFactor[i] * data.axes[3];
                                     //provide haptic feedback if available in browser
                                     if (
                                         source.gamepad.hapticActuators &&
@@ -436,9 +436,9 @@ gltf.scene.rotation.y =  Math.PI;
                                             pulseStrength = 0.75;
                                         }
                                        // var didPulse = source.gamepad.hapticActuators[0].pulse(
-                                            pulseStrength,
-                                            100
-                                        );
+                                       //     pulseStrength,
+                                       //     100
+                                       // );
                                     }
                                 } else {
                                     // (data.axes[3] > 0) ? console.log('up on right thumbstick') : console.log('down on right thumbstick')
