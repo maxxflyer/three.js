@@ -415,7 +415,7 @@ gltf.scene.rotation.y =  Math.PI;
                                     }
                                 } else {
                                     // (data.axes[2] > 0) ? console.log('left on right thumbstick') : console.log('right on right thumbstick')
-                                    dolly.rotateY(-THREE.Math.degToRad(data.axes[2]));
+                                    dolly.rotateY(-THREE.Math.degToRad(data.axes[2])*0.1);
                                 }
                                 controls.update();
                             }
