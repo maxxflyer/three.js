@@ -126,7 +126,7 @@
 
 			
 
-			const STEPS_PER_FRAME = 5;
+			const STEPS_PER_FRAME = 4;
 
 			
 
@@ -355,11 +355,7 @@
 				for ( let i = 0; i < STEPS_PER_FRAME; i ++ ) {
 
 					controlz( deltaTime );
-
 					updatePlayer( deltaTime );
-
-					
-
 					teleportPlayerIfOob();
 
 				}
@@ -369,7 +365,7 @@
 				//stats.update();
 
 				requestAnimationFrame( animate );
-dollyMove();
+				dollyMove();
 			}
 			
 			function dollyMove() {
