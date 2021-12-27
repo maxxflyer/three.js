@@ -48,8 +48,7 @@ let container;
 				light.shadow.camera.left = - 2;
 				light.shadow.mapSize.set( 4096, 4096 );
 				scene.add( light );
-
-			
+container = document.getElementById( 'container' );
 			controls = new OrbitControls( camera, container );
 				controls.target.set( 0, 1.6, 0 );
 				controls.update();
@@ -60,7 +59,7 @@ let container;
 			renderer.shadowMap.enabled = true;
 			renderer.shadowMap.type = THREE.VSMShadowMap;
 
-			const container = document.getElementById( 'container' );
+			
 
 			container.appendChild( renderer.domElement );
 			
