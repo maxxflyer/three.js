@@ -60,7 +60,7 @@ container = document.getElementById( 'container' );
 			renderer.shadowMap.type = THREE.VSMShadowMap;
 
 			
-
+document.body.appendChild( VRButton.createButton( renderer ) );
 			container.appendChild( renderer.domElement );
 			
 			// controllers
