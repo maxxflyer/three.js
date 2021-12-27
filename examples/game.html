@@ -23,9 +23,9 @@
 			import { Octree } from './jsm/math/Octree.js';
 			import { Capsule } from './jsm/math/Capsule.js';
 
-let controls, group;
+			let controls, group;
 			const clock = new THREE.Clock();
-let container;
+			let container;
 			let raycaster;
 			const scene = new THREE.Scene();
 			scene.background = new THREE.Color( 0x88ccff );
@@ -48,10 +48,11 @@ let container;
 				light.shadow.camera.left = - 2;
 				light.shadow.mapSize.set( 4096, 4096 );
 				scene.add( light );
-container = document.getElementById( 'container' );
+				container = document.getElementById( 'container' );
+			
 			controls = new OrbitControls( camera, container );
-				controls.target.set( 0, 1.6, 0 );
-				controls.update();
+			controls.target.set( 0, 1.6, 0 );
+			controls.update();
 			
 			const renderer = new THREE.WebGLRenderer( { antialias: true } );
 			renderer.setPixelRatio( window.devicePixelRatio );
@@ -61,14 +62,14 @@ container = document.getElementById( 'container' );
 			renderer.shadowMap.type = THREE.VSMShadowMap;
 
 			
-document.body.appendChild( VRButton.createButton( renderer ) );
+			document.body.appendChild( VRButton.createButton( renderer ) );
 			container.appendChild( renderer.domElement );
 			
 			// controllers
-const session = renderer.xr.getSession();
+			const session = renderer.xr.getSession();
    
 
-    if (session) {
+    			if (session) {
 				controller1 = renderer.xr.getController( 0 );
 				//controller1.addEventListener( 'selectstart', onSelectStart );
 				//controller1.addEventListener( 'selectend', onSelectEnd );
@@ -105,13 +106,13 @@ const session = renderer.xr.getSession();
 				dolly = new THREE.Group();
     				dolly.position.set(0, 0.3, 0);
     				dolly.name = "dolly";
-    				scene.add(dolly);
     				dolly.add(camera);
     				dolly.add(controller1);
     				dolly.add(controller2);
     				dolly.add(controllerGrip1);
     				dolly.add(controllerGrip2);
-    }
+				scene.add(dolly);
+	    		}
 				//
 
 			const stats = new Stats();
