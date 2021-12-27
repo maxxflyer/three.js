@@ -21,7 +21,7 @@
 			import { XRControllerModelFactory } from './jsm/webxr/XRControllerModelFactory.js';
 			import { Octree } from './jsm/math/Octree.js';
 			import { Capsule } from './jsm/math/Capsule.js';
-			console.log("2");
+			console.log("3");
 			let controls, group;
 			const clock = new THREE.Clock();
 			let container;
@@ -33,7 +33,7 @@
 			let controller1, controller2;
 			let controllerGrip1, controllerGrip2;
 			
-			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 100 );
 			camera.rotation.order = 'YXZ';
 
 			scene.add( new THREE.HemisphereLight( 0x808080, 0x606060 ) );
