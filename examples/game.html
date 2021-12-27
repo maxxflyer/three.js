@@ -260,7 +260,7 @@ container = document.getElementById( 'container' );
 
 			}
 
-			function controls( deltaTime ) {
+			function controlz( deltaTime ) {
 
 				// gives a bit of air control
 				const speedDelta = deltaTime * ( playerOnFloor ? 25 : 8 );
@@ -350,7 +350,7 @@ container = document.getElementById( 'container' );
 
 				for ( let i = 0; i < STEPS_PER_FRAME; i ++ ) {
 
-					controls( deltaTime );
+					controlz( deltaTime );
 
 					updatePlayer( deltaTime );
 
