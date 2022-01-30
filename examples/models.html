@@ -185,7 +185,7 @@ if(i==0)prev=object;
     				const root = gltf.scene;
 	  			root.position.y = 1;
 				//root.position.z =10;
-    				//scene.add(root);
+    				scene.add(root);
 	 
 	  			});
 				gltfLoader.setPath( 'models/gltf/' ).load( 'SheenChair.glb', function ( gltf2 ) {
@@ -194,7 +194,7 @@ if(i==0)prev=object;
 						gltf2.scene.rotation.y =  Math.PI;
 						const object = gltf2.scene.getObjectByName( 'SheenChair_fabric' );
 					group.add(object)	
-						console.log("6");
+						console.log("7");
 						console.log(object);
 					console.log(group);
 						//const gui = new GUI();
