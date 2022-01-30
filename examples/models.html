@@ -47,7 +47,7 @@
 				scene = new THREE.Scene();
 				scene.background = new THREE.Color( 0x808080 );
 
-				camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 20 );
+				camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 100 );
 				camera.position.set( 0, 2, 3 );
 
 				controls = new OrbitControls( camera, container );
@@ -196,7 +196,7 @@ if(i==0)prev=object;
 						gltf2.scene.rotation.y =  Math.PI;
 						const object = gltf2.scene.getObjectByName( 'SheenChair_fabric' );
 					group.add(object)	
-						console.log("9");
+						console.log("10");
 						console.log(object);
 					console.log(group);
 						//const gui = new GUI();
