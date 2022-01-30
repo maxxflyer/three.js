@@ -185,15 +185,16 @@ if(i==0)prev=object;
     				const root = gltf.scene;
 	  			root.position.y = 1;
 				//root.position.z =10;
-    				scene.add(root);
+    				//scene.add(root);
 	 
 	  			});
-				gltfLoader.setPath( 'models/gltf/' ).load( 'SheenChair.glb', function ( gltf ) {
+				gltfLoader.setPath( 'models/gltf/' ).load( 'SheenChair.glb', function ( gltf2 ) {
  						//scene.add( gltf.scene );
-						group.add(gltf.scene)	
+						
 						gltf.scene.rotation.y =  Math.PI;
 						const object = gltf.scene.getObjectByName( 'SheenChair_fabric' );
-						console.log("5");
+					group.add(object)	
+						console.log("6");
 						console.log(object);
 						//const gui = new GUI();
 
