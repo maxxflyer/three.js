@@ -87,7 +87,7 @@
 					new THREE.TorusGeometry( 0.2, 0.04, 64, 32 )
 				];
 
-				for ( let i = 0; i < 0; i ++ ) {
+				for ( let i = 0; i < 5; i ++ ) {
 
 					const geometry = geometries[ Math.floor( Math.random() * geometries.length ) ];
 					const material = new THREE.MeshStandardMaterial( {
@@ -189,7 +189,7 @@
 						group.add(gltf.scene)	
 						gltf.scene.rotation.y =  Math.PI;
 						const object = gltf.scene.getObjectByName( 'SheenChair_fabric' );
-						console.log("1")
+						console.log("2")
 						//const gui = new GUI();
 
 						//gui.add( object.material, 'sheen', 0, 1 );
