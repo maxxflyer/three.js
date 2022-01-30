@@ -24,6 +24,7 @@
 			let controllerGrip1, controllerGrip2;
 
 			let raycaster;
+			let prevcol;
 
 			const intersected = [];
 			const tempMatrix = new THREE.Matrix4();
@@ -192,7 +193,7 @@ if(i==0)prev=object;
 						group.add(gltf.scene)	
 						gltf.scene.rotation.y =  Math.PI;
 						const object = gltf.scene.getObjectByName( 'SheenChair_fabric' );
-						console.log("3")
+						console.log("4")
 						//const gui = new GUI();
 
 						//gui.add( object.material, 'sheen', 0, 1 );
@@ -227,7 +228,9 @@ if(i==0)prev=object;
 					const intersection = intersections[ 0 ];
 
 					const object = intersection.object;
-					object.material.emissive.b = 1;
+					prevcol=object.material.color;
+					 object.material.color.set( Math.random() * 0xffffff );
+
 					controller.attach( object );
 
 					controller.userData.selected = object;
@@ -243,7 +246,9 @@ if(i==0)prev=object;
 				if ( controller.userData.selected !== undefined ) {
 
 					const object = controller.userData.selected;
-					object.material.emissive.b = 0;
+					//object.material.emissive.b = 0;
+					
+					object.material.color.set( prevcol );
 					group.attach( object );
 
 					controller.userData.selected = undefined;
@@ -278,7 +283,9 @@ if(i==0)prev=object;
 					const intersection = intersections[ 0 ];
 
 					const object = intersection.object;
-					object.material.emissive.r = 1;
+					//object.material.emissive.r = 1;
+					prevcol=object.material.color;
+					 object.material.color.set( Math.random() * 0xffffff );
 					intersected.push( object );
 
 					line.scale.z = intersection.distance;
@@ -296,7 +303,8 @@ if(i==0)prev=object;
 				while ( intersected.length ) {
 
 					const object = intersected.pop();
-					object.material.emissive.r = 0;
+					//object.material.emissive.r = 0;
+					object.material.color.set( prevcol );
 
 				}
 
